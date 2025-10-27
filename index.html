@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Anna Caroline - UX Designer</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Favicon -->
+  <link rel="icon" href="images/favicon.png" type="image/png" />
+  <!-- Heroicons CDN para ícones -->
+  <script src="https://unpkg.com/feather-icons"></script>
+</head>
+
+<body class="font-sans text-gray-800 bg-white">
+
+  <!-- ✅ NAVBAR FIXA E RESPONSIVA COM MENU MOBILE NATIVO -->
+  <nav class="fixed top-0 left-0 w-full bg-white border-b z-50">
+    <div class="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center">
+
+      <!-- LOGO -->
+      <a href="index.html">
+        <img src="images/logo-illustration.png" alt="Logo Anna" class="h-6" />
+      </a>
+
+      <!-- BOTÃO HAMBURGUER (abre menu mobile) -->
+      <button id="menu-toggle" class="md:hidden text-gray-800 focus:outline-none">
+        <!-- Ícone hamburguer -->
+        <svg id="icon-open" class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"
+          stroke-linecap="round" stroke-linejoin="round">
+          <path d="M4 6h16M4 12h16M4 18h16" />
+        </svg>
+
+        <!-- Ícone X (fechar) - escondido inicialmente -->
+        <svg id="icon-close" class="w-6 h-6 hidden" fill="none" stroke="currentColor" stroke-width="2"
+          viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M6 18L18 6M6 6l12 12" />
+        </svg>
+      </button>
+
+      <!-- MENU DESKTOP -->
+      <ul class="hidden md:flex space-x-6 text-sm font-medium">
+        <li><a href="about.html" class="hover:underline">Sobre</a></li>
+        <li><a href="index.html#portfolio" class="hover:underline">Projetos</a></li>
+        <li><a href="index.html#contato" class="hover:underline">Contato</a></li>
+      </ul>
+    </div>
+
+    <!-- MENU MOBILE -->
+    <div id="mobile-menu"
+      class="hidden fixed inset-0 bg-[#009379] text-white flex flex-col items-center justify-center space-y-6 text-lg font-medium z-40">
+
+      <!-- BOTÃO FECHAR COM IMAGEM -->
+      <button id="menu-close" class="absolute top-6 right-6 focus:outline-none">
+        <img src="images/close (1).png" alt="Fechar menu" class="w-4 h-4" />
+      </button>
+
+      <a href="about.html" onclick="closeMenu()" class="hover:underline">Sobre</a>
+      <a href="index.html#portfolio" onclick="closeMenu()" class="hover:underline">Projetos</a>
+      <a href="index.html#contato" onclick="closeMenu()" class="hover:underline">Contato</a>
+
+      <!-- REDES SOCIAIS -->
+      <div class="flex gap-6 pt-4">
+        <!-- Seus ícones -->
+      </div>
+    </div>
+
+  </nav>
+  <!-- 👇 Conteúdo principal com padding para compensar navbar fixa -->
+  <main class="pt-24">
+
+
+    <!-- ✅ HERO -->
+    <section class="py-20 px-4">
+      <div class="max-w-7xl mx-auto grid md:grid-cols-2 gap-12 items-center">
+        <div class="space-y-6">
+          <p class="text-sm text-gray-500 font-medium">Branding | UX Designer</p>
+          <h1 class="text-2xl md:text-6xl font-bold leading-tight text-[2D2D2D]">Olá, eu sou a Anna!</h1>
+          <p class="text-xl text-gray-600">
+            Transformo insights em experiências visuais que fortalecem marcas e geram valor.
+          </p>
+          <div class="flex gap-4 pt-4">
+
+            <!--Linkedin-->
+
+            <a href="https://www.linkedin.com/in/annacarolngarcia/" target="_blank" rel="noopener noreferrer">
+              <div class="w-12 h-12 border-2 border-black rounded-full flex items-center justify-center font-semibold">
+                in
+              </div>
+            </a>
+
+            <!--Behance-->
+
+            <a href="https://www.behance.net/Annaancol6b39" target="_blank" rel="noopener noreferrer">
+              <div class="w-12 h-12 border-2 border-black rounded-full flex items-center justify-center font-semibold">
+                Bē
+              </div>
+            </a>
+
+
+          </div>
+        </div>
+        <div>
+          <img src="images/hero-illustration.png.png" class="w-full max-w-md mx-auto" />
+        </div>
+      </div>
+    </section>
+
+    <!-- ✅ SKILLS -->
+    <section class="py-16" style="background-color: #F9D57F;">
+      <div class="max-w-7xl mx-auto px-4 text-center grid md:grid-cols-3 gap-10">
+        <div>
+          <img src="images/icon-product-design.png.png" class="mx-auto mb-4 w-auto h-16" alt="Product Design" />
+          <h3 class="font-bold text-3xl mb-2">Product design</h3>
+          <p class="text-xl">Transformo ideias em soluções digitais funcionais e intuitivas que conectam pessoas a
+            produtos de forma fluida.</p>
+        </div>
+        <div>
+          <img src="images/icon-art-direction.png.png" class="mx-auto mb-4 w-auto h-16" alt="Art Direction" />
+          <h3 class="font-bold text-3xl mb-2">Art direction</h3>
+          <p class="text-xl">Direção criativa que une estratégia e estética para construir narrativas visuais autênticas
+            e
+            marcantes.</p>
+        </div>
+        <div>
+          <img src="images/icon-visual-design.png.png" class="mx-auto mb-4 w-auto h-16" alt="Visual Design" />
+          <h3 class="font-bold text-3xl mb-2">Visual design</h3>
+          <p class="text-xl">Detalhes que fazem a diferença: cores, formas e tipografia como ferramentas para impactar.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ✅ PORTFÓLIO -->
+    <section id="portfolio" class="py-20 px-4">
+      <div class="max-w-7xl mx-auto">
+        <h2 class="text-2xl font-bold text-center mb-12 text-[#404040]">Meus últimos projetos</h2>
+        <div class="grid md:grid-cols-3 gap-8">
+          <a href="project1.html" class="block">
+            <img src="images/project1.html.png" alt="Projeto Free Bird" class="rounded-md" />
+            <h4 class="font-semibold mt-3">Buyflow Argentina</h4>
+            <p class="text-sm text-gray-500">Jornada de assinatura para o mercado argentino</p>
+          </a>
+          <a href="project2.html" class="block">
+            <img src="images/project2.html.png" alt="Projeto Purple Haze" class="rounded-md" />
+            <h4 class="font-semibold mt-3">Projeto Wallet</h4>
+            <p class="text-sm text-gray-500">Pagamento recorrente com Mercado Pago Wallet.</p>
+          </a>
+          <a href="project3.html" class="block">
+            <img src="images/project3.html.png" alt="Projeto You Really Got Me" class="rounded-md" />
+            <h4 class="font-semibold mt-3">Projeto Amazon + SKY</h4>
+            <p class="text-sm text-gray-500">Integração de parceiros de streaming e ativação via UX.</p>
+          </a>
+
+
+        </div>
+
+        <!-- LINHA 2: Projetos externos no Behance -->
+        <div class="grid md:grid-cols-3 gap-8 mt-12">
+
+          <!-- Projeto Behance 1 -->
+          <a href="https://www.behance.net/gallery/135562707/E-Civil-UI-Design" target="_blank" class="block">
+            <img src="images/ecivil.png" alt="Projeto Behance 1" class="rounded-md" />
+            <h4 class="font-semibold mt-3">E-Civil App</h4>
+            <p class="text-sm text-gray-500">UX para aplicativo</p>
+          </a>
+
+          <!-- Projeto Behance 2 -->
+          <a href="https://www.behance.net/gallery/134106125/Beebee-Redesign-UX-Ui-Design" target="_blank" class="block">
+            <img src="images/beebee.png" alt="Projeto Behance 2" class="rounded-md" />
+            <h4 class="font-semibold mt-3">Beebee Redesign</h4>
+            <p class="text-sm text-gray-500">Redesign UX/UI para app de entregas</p>
+          </a>
+
+          <!-- Projeto Behance 3 -->
+          <a href="https://www.behance.net/gallery/133558181/Branding-Fontana-Dibai-Engenharia" target="_blank" class="block">
+            <img src="images/fd.jpg" alt="Projeto Behance 3" class="rounded-md" />
+            <h4 class="font-semibold mt-3">Fontana Dibai</h4>
+            <p class="text-sm text-gray-500">Branding e identidade visual para engenharia</p>
+          </a>
+
+        </div>
+
+
+      </div>
+
+    </section>
+
+    <!-- ✅ CONTATO -->
+    <section id="contato" class="bg-white py-20 px-4 border-t">
+      <div class="max-w-6xl mx-auto grid md:grid-cols-2 gap-10">
+        <!-- Texto -->
+        <div>
+          <h2 class="text-4xl font-bold mb-4">Bora criar algo incrível?</h2>
+          <p class="mb-4">De branding a UX, meu foco é dar vida às suas ideias.</p>
+          <p>Me chama e vamos começar!</p>
+          <div class="flex gap-4 text-2xl mt-6 items-center">
+            <!--<span>📷 Instagram</span>
+          <span class="font-bold">Bē</span> -->
+          </div>
+        </div>
+
+        <!-- Formulário -->
+        <form action="https://formspree.io/f/mwkgrljz" method="POST" class="space-y-4">
+          <input type="text" name="nome" placeholder="Nome" required
+            class="w-full p-3 border border-gray-300 rounded" />
+          <input type="email" name="email" placeholder="Email" required
+            class="w-full p-3 border border-gray-300 rounded" />
+          <textarea name="mensagem" placeholder="Escreva sua mensagem aqui" rows="4" required
+            class="w-full p-3 border border-gray-300 rounded"></textarea>
+          <button type="submit" class="bg-black text-white px-6 py-3 rounded hover:bg-gray-800">Enviar</button>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <!-- FEATHER ICONS INIT -->
+  <script>
+    const menuToggle = document.getElementById('menu-toggle');
+    const menuClose = document.getElementById('menu-close');
+    const mobileMenu = document.getElementById('mobile-menu');
+
+    // Abrir o menu
+    menuToggle.addEventListener('click', () => {
+      mobileMenu.classList.remove('hidden');
+    });
+
+    // Fechar o menu
+    menuClose.addEventListener('click', () => {
+      mobileMenu.classList.add('hidden');
+    });
+
+    // Fechar ao clicar em um link
+    function closeMenu() {
+      mobileMenu.classList.add('hidden');
+    }
+  </script>
+
+
+</body>
+
+</html>

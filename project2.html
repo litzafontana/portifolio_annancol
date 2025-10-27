@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Projeto 1 - BuyFlow Argentina</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Favicon -->
+  <link rel="icon" href="images/favicon.png" type="image/png" />
+  <style>
+    .hide-scrollbar {
+      scrollbar-width: none;
+      /* Firefox */
+      -ms-overflow-style: none;
+      /* IE 10+ */
+    }
+
+    .hide-scrollbar::-webkit-scrollbar {
+      display: none;
+      /* Chrome, Safari */
+    }
+  </style>
+</head>
+
+<body class="font-sans text-gray-800 bg-white">
+
+  <!-- ✅ NAVBAR FIXA E RESPONSIVA COM MENU MOBILE -->
+  <nav class="fixed top-0 left-0 w-full bg-white border-b z-50">
+    <div class="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center">
+
+      <!-- LOGO -->
+      <a href="index.html">
+        <img src="images/logo-illustration.png" alt="Logo Anna" class="h-6" />
+      </a>
+
+      <!-- BOTÃO HAMBURGUER -->
+      <button id="menu-toggle" class="md:hidden text-gray-800 focus:outline-none">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2"
+          viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M4 6h16M4 12h16M4 18h16" />
+        </svg>
+      </button>
+
+      <!-- MENU DESKTOP -->
+      <ul class="hidden md:flex space-x-6 text-sm font-medium">
+        <li><a href="about.html" class="hover:underline">Sobre</a></li>
+        <li><a href="index.html#portfolio" class="hover:underline">Projetos</a></li>
+        <li><a href="index.html#contato" class="hover:underline">Contato</a></li>
+      </ul>
+    </div>
+
+    <!-- MENU MOBILE -->
+    <div id="mobile-menu"
+      class="hidden fixed inset-0 bg-[#009379] text-white flex flex-col items-center justify-center space-y-6 text-lg font-medium z-40">
+
+      <!-- BOTÃO FECHAR COM IMAGEM -->
+      <button id="menu-close" class="absolute top-6 right-6 focus:outline-none">
+        <img src="images/close (1).png" alt="Fechar menu" class="w-4 h-4" />
+      </button>
+
+      <!-- LINKS -->
+      <a href="about.html" onclick="closeMenu()" class="hover:underline">Sobre</a>
+      <a href="index.html#portfolio" onclick="closeMenu()" class="hover:underline">Projetos</a>
+      <a href="index.html#contato" onclick="closeMenu()" class="hover:underline">Contato</a>
+
+      <!-- REDES SOCIAIS (adicione os ícones se quiser aqui) -->
+      <div class="flex gap-6 pt-4">
+        <!-- Exemplo:
+        <a href="#" target="_blank"><img src="images/icon-behance.svg" class="w-5 h-5" /></a>
+        -->
+      </div>
+    </div>
+  </nav>
+
+
+  <!-- ✅ CAPA -->
+  <section class="w-full">
+    <img src="images/project2-hero.png" alt="Capa do projeto Wallet" class="w-full object-cover" />
+  </section>
+
+  <!-- ✅ INTRO -->
+  <section class="max-w-4xl mx-auto py-12 px-4 space-y-6">
+    <div class="flex flex-col gap-2 text-sm md:text-base">
+      <p><strong>Projeto:</strong> Wallet</p>
+      <p><strong>Cliente:</strong> DGO</p>
+      <p><strong>Plataforma:</strong> Web & Web Mobile</p>
+      <p><strong>Região:</strong> 🇦🇷 Argentina</p>
+    </div>
+  </section>
+
+
+  <!-- ✅ OBJETIVOS -->
+  <section class="py-12 px-4 bg-[#F9D57F]">
+    <div class="max-w-4xl mx-auto space-y-6">
+      <h2 class="text-2xl font-bold text-gray-800">Objetivos</h2>
+      <p>
+        Incorporar o novo método de pagamento com Mercado Pago Wallet ao fluxo de assinatura OTT da Argentina,
+        informando claramente ao usuário sobre o tipo de pagamento (recorrente ou pontual) e redirecionando-o
+        de forma transparente para o ambiente externo do Mercado Pago.
+      </p>
+    </div>
+  </section>
+
+  <!-- ✅ CONTRIBUIÇÕES -->
+  <section class="py-12 px-4">
+    <div class="max-w-4xl mx-auto space-y-6">
+      <h2 class="text-2xl font-bold text-gray-800">Minhas contribuições</h2>
+      <ul class="list-disc pl-6 space-y-2">
+        <li>Mapeei as regras do novo método de pagamento com Mercado Pago Wallet.</li>
+        <li>Criei o fluxo de pagamento recorrente com foco em clareza para o usuário.</li>
+        <li>Estruturei a interface preparada para possível inclusão do pagamento pontual.</li>
+        <li>Colaborei com times de produto e desenvolvimento para garantir a viabilidade técnica e a boa experiência
+          do usuário.</li>
+      </ul>
+    </div>
+  </section>
+
+  <hr class="border-t-2 border-[#D7D4D4]  w-1/2 mx-auto my-16" />
+
+  <!-- ✅ SOLUÇÃO -->
+  <section class="py-12 px-4">
+    <div class="max-w-4xl mx-auto space-y-6">
+      <h2 class="text-2xl font-bold text-gray-800">Solução</h2>
+
+      <p>
+        Adição de uma nova seção dentro do card de método de pagamento (Elite) chamada
+        <strong>“Mercado Pago – Débito Automático”</strong>, informando ao usuário que:
+      </p>
+
+      <ul class="list-disc pl-6 space-y-2">
+        <li>O pagamento será feito por débito automático via Mercado Pago Wallet</li>
+        <li>Ele será redirecionado para o ambiente do Mercado Pago para autorizar a cobrança</li>
+        <li>O uso de voucher também está disponível nessa forma de pagamento</li>
+      </ul>
+
+      <p>
+        A interface foi preparada para suporte futuro ao pagamento pontual, embora atualmente apenas a opção
+        recorrente esteja disponível.
+      </p>
+    </div>
+  </section>
+
+  <!-- ✅ IMAGEM MOCKUP -->
+  <section class="py-16">
+    <div class="max-w-5xl mx-auto">
+      <img src="images/project2-mockup.png" alt="Tela de pagamento Mercado Pago" class="mx-auto" />
+    </div>
+  </section>
+
+  <hr class="border-t-2 border-[#D7D4D4]  w-1/2 mx-auto my-16" />
+
+  <!-- ✅ MAIS PROJETOS COM CARROSSEL E SETAS -->
+<section class="bg-white py-16 px-4 relative">
+  <div class="max-w-7xl mx-auto">
+    <h2 class="text-2xl font-bold text-gray-800 mb-12 text-center">Mais projetos</h2>
+
+    <div class="relative">
+      <!-- ⬅️ Botão esquerda -->
+      <button id="scrollLeft"
+        class="hidden md:flex items-center justify-center absolute left-0 top-1/2 -translate-y-1/2 w-10 h-10 bg-black/20 text-white rounded-full z-10 hover:bg-black/40 transition">
+        &#8592;
+      </button>
+
+      <!-- ➡️ Botão direita -->
+      <button id="scrollRight"
+        class="hidden md:flex items-center justify-center absolute right-0 top-1/2 -translate-y-1/2 w-10 h-10 bg-black/20 text-white rounded-full z-10 hover:bg-black/40 transition">
+        &#8594;
+      </button>
+
+      <!-- Carrossel -->
+      <div id="carousel"
+        class="flex gap-6 overflow-x-auto scroll-smooth snap-x snap-mandatory pb-4 -mx-4 px-4 hide-scrollbar">
+
+        <!-- Projeto interno 1 -->
+        <a href="project1.html"
+          class="min-w-[80%] md:min-w-[33.33%] bg-gray-50 rounded-xl shadow p-6 hover:shadow-md transition text-left snap-start block">
+          <img src="images/project1.html.png" alt="Buyflow Argentina" class="rounded mb-4 w-full h-48 object-cover" />
+          <h3 class="text-lg font-semibold text-gray-800">Buyflow Argentina</h3>
+          <p class="text-sm text-gray-600 mt-1">Jornada de assinatura para o mercado argentino.</p>
+          <span class="mt-3 inline-block text-blue-600 text-sm font-medium hover:underline">Ver projeto 🔗</span>
+        </a>
+
+        <!-- Projeto interno 2 -->
+        <a href="project3.html"
+          class="min-w-[80%] md:min-w-[33.33%] bg-gray-50 rounded-xl shadow p-6 hover:shadow-md transition text-left snap-start block">
+          <img src="images/project3.html.png" alt="Projeto Amazon + SKY" class="rounded mb-4 w-full h-48 object-cover" />
+          <h3 class="text-lg font-semibold text-gray-800">Projeto Amazon + SKY</h3>
+          <p class="text-sm text-gray-600 mt-1">Integração de parceiros de streaming e ativação via UX.</p>
+          <span class="mt-3 inline-block text-blue-600 text-sm font-medium hover:underline">Ver projeto 🔗</span>
+        </a>
+
+        <!-- Projeto externo 1 -->
+          <a href="https://www.behance.net/gallery/135562707/E-Civil-UI-Design" target="_blank"
+            class="min-w-[80%] md:min-w-[33.33%] bg-gray-50 rounded-xl shadow p-6 hover:shadow-md transition text-left snap-start block">
+            <img src="images/ecivil.png" alt="App Saúde" class="rounded mb-4 w-full h-48 object-cover" />
+            <h3 class="text-lg font-semibold text-gray-800">E-Civil App</h3>
+            <p class="text-sm text-gray-600 mt-1">UX para aplicativo</p>
+            <span class="mt-3 inline-block text-blue-600 text-sm font-medium hover:underline">Ver no Behance 🔗</span>
+          </a>
+
+          <!-- Projeto externo 2 -->
+          <a href="https://www.behance.net/gallery/134106125/Beebee-Redesign-UX-Ui-Design" target="_blank"
+            class="min-w-[80%] md:min-w-[33.33%] bg-gray-50 rounded-xl shadow p-6 hover:shadow-md transition text-left snap-start block">
+            <img src="images/beebee.png" alt="E-commerce Petlove" class="rounded mb-4 w-full h-48 object-cover" />
+            <h3 class="text-lg font-semibold text-gray-800">Beebee Redesign</h3>
+            <p class="text-sm text-gray-600 mt-1">Redesign UX/UI para app de entregas</p>
+            <span class="mt-3 inline-block text-blue-600 text-sm font-medium hover:underline">Ver no Behance 🔗</span>
+          </a>
+
+          <!-- Projeto externo 3 -->
+          <a href="https://www.behance.net/gallery/133558181/Branding-Fontana-Dibai-Engenharia" target="_blank"
+            class="min-w-[80%] md:min-w-[33.33%] bg-gray-50 rounded-xl shadow p-6 hover:shadow-md transition text-left snap-start block">
+            <img src="images/fd.jpg" alt="ONG Cursos" class="rounded mb-4 w-full h-48 object-cover" />
+            <h3 class="text-lg font-semibold text-gray-800">Fontana Dibai</h3>
+            <p class="text-sm text-gray-600 mt-1">Branding e identidade visual para engenharia</p>
+            <span class="mt-3 inline-block text-blue-600 text-sm font-medium hover:underline">Ver no Behance 🔗</span>
+          </a>
+
+      </div>
+    </div>
+  </div>
+</section>
+
+
+  <!-- ✅ CONTATO -->
+  <section id="contato" class="bg-white py-20 px-4 border-t">
+    <div class="max-w-6xl mx-auto grid md:grid-cols-2 gap-10">
+      <!-- Texto -->
+      <div>
+        <h2 class="text-4xl font-bold mb-4">Bora criar algo incrível?</h2>
+        <p class="mb-4">De branding a UX, meu foco é dar vida às suas ideias.</p>
+        <p>Me chama e vamos começar!</p>
+        <div class="flex gap-4 text-2xl mt-6 items-center">
+          <!--<span>📷 Instagram</span>
+          <span class="font-bold">Bē</span> -->
+        </div>
+      </div>
+
+
+
+      <!-- Formulário -->
+      <form action="https://formspree.io/f/mwkgrljz" method="POST" class="space-y-4">
+        <input type="text" name="nome" placeholder="Nome" required class="w-full p-3 border border-gray-300 rounded" />
+        <input type="email" name="email" placeholder="Email" required
+          class="w-full p-3 border border-gray-300 rounded" />
+        <textarea name="mensagem" placeholder="Escreva sua mensagem aqui" rows="4" required
+          class="w-full p-3 border border-gray-300 rounded"></textarea>
+        <button type="submit" class="bg-black text-white px-6 py-3 rounded hover:bg-gray-800">Enviar</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- FEATHER ICONS INIT -->
+  <script>
+    const menuToggle = document.getElementById('menu-toggle');
+    const menuClose = document.getElementById('menu-close');
+    const mobileMenu = document.getElementById('mobile-menu');
+
+    // Abrir o menu
+    menuToggle.addEventListener('click', () => {
+      mobileMenu.classList.remove('hidden');
+    });
+
+    // Fechar o menu
+    menuClose.addEventListener('click', () => {
+      mobileMenu.classList.add('hidden');
+    });
+
+    // Fechar ao clicar em um link
+    function closeMenu() {
+      mobileMenu.classList.add('hidden');
+    }
+  </script>
+
+  <script>
+  const carousel = document.getElementById("carousel");
+  const scrollLeftBtn = document.getElementById("scrollLeft");
+  const scrollRightBtn = document.getElementById("scrollRight");
+
+  if (carousel && scrollLeftBtn && scrollRightBtn) {
+    scrollLeftBtn.addEventListener("click", () => {
+      carousel.scrollBy({
+        left: -carousel.offsetWidth * 0.8,
+        behavior: 'smooth'
+      });
+    });
+
+    scrollRightBtn.addEventListener("click", () => {
+      carousel.scrollBy({
+        left: carousel.offsetWidth * 0.8,
+        behavior: 'smooth'
+      });
+    });
+  }
+</script>
+
+</body>
+
+</html>
