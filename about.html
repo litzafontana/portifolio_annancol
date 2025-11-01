@@ -7,32 +7,25 @@
   <title>Sobre - Anna Caroline</title>
   <script src="https://cdn.tailwindcss.com"></script>
 
-  <!-- Favicon -->
-
   <link rel="icon" href="images/favicon.png" type="image/png" />
 </head>
 </head>
 
 <body class="font-sans text-gray-800 bg-white">
 
-  <!-- ✅ NAVBAR FIXA E RESPONSIVA COM MENU MOBILE NATIVO -->
   <nav class="fixed top-0 left-0 w-full bg-white border-b z-50">
     <div class="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center">
 
-      <!-- LOGO -->
       <a href="index.html">
         <img src="images/logo-illustration.png" alt="Logo Anna" class="h-6" />
       </a>
 
-      <!-- BOTÃO HAMBURGUER (abre menu mobile) -->
       <button id="menu-toggle" class="md:hidden text-gray-800 focus:outline-none">
-        <!-- Ícone hamburguer -->
         <svg id="icon-open" class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"
           stroke-linecap="round" stroke-linejoin="round">
           <path d="M4 6h16M4 12h16M4 18h16" />
         </svg>
 
-        <!-- Ícone X (fechar) - escondido inicialmente -->
         <svg id="icon-close" class="w-6 h-6 hidden" fill="none" stroke="currentColor" stroke-width="2"
           viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round">
           <path d="M6 18L18 6M6 6l12 12" />
@@ -40,7 +33,6 @@
       </button>
       </nav>
 
-      <!-- MENU DESKTOP -->
       <ul class="hidden md:flex space-x-6 text-sm font-medium">
         <li><a href="about.html" class="hover:underline">Sobre</a></li>
         <li><a href="index.html#portfolio" class="hover:underline">Projetos</a></li>
@@ -48,11 +40,9 @@
       </ul>
     </div>
 
-    <!-- MENU MOBILE -->
     <div id="mobile-menu"
       class="hidden fixed inset-0 bg-[#009379] text-white flex flex-col items-center justify-center space-y-6 text-lg font-medium z-40">
 
-      <!-- BOTÃO FECHAR COM IMAGEM -->
       <button id="menu-close" class="absolute top-6 right-6 focus:outline-none">
         <img src="images/close (1).png" alt="Fechar menu" class="w-4 h-4" />
       </button>
@@ -61,13 +51,10 @@
       <a href="index.html#portfolio" onclick="closeMenu()" class="hover:underline">Projetos</a>
       <a href="index.html#contato" onclick="closeMenu()" class="hover:underline">Contato</a>
 
-      <!-- REDES SOCIAIS -->
       <div class="flex gap-6 pt-4">
-        <!-- Seus ícones -->
-      </div>
+        </div>
     </div>
 
-    <!-- ✅ BIO SECTION -->
     <section class="bg-[#F9E6F0] py-16 px-4">
       <div class="max-w-5xl mx-auto flex flex-col md:flex-row items-center gap-10">
         <div class="relative">
@@ -86,7 +73,6 @@
       </div>
     </section>
 
-    <!-- ✅ SOBRE TEXTO + LISTA -->
     <section class="py-16 px-4">
       <div class="max-w-4xl mx-auto">
         <p class="text-lg md:text-xl mb-6">
@@ -95,7 +81,6 @@
           funcionar ao mesmo tempo.
         </p>
 
-        <!-- Lista com título colorido -->
         <div class="mt-6">
           <div class="bg-[#009379] text-white px-4 py-2 font-semibold rounded-t w-full">Ser designer é…</div>
           <ul class="list-disc pl-6 mt-3 space-y-2 text-gray-700">
@@ -108,47 +93,38 @@
       </div>
     </section>
 
-    <!-- ✅ CONTATO -->
     <section id="contato" class="bg-white py-20 px-4 border-t">
       <div class="max-w-6xl mx-auto grid md:grid-cols-2 gap-10">
-        <!-- Texto -->
         <div>
           <h2 class="text-2xl font-bold mb-4">Bora criar algo incrível?</h2>
           <p class="mb-4">De branding a UX, meu foco é dar vida às suas ideias.</p>
           <p>Me chama e vamos começar!</p>
           <div class="flex gap-4 text-xl mt-6 items-center">
-            <!--<span>📷 Instagram</span>
-          <span class="font-bold">Bē</span> -->
-          </div>
+            </div>
         </div>
 
-        <!-- Formulário -->
-
-       <!-- Formulário -->
-<form action="https://formsubmit.co/anna.ancol@gmail.com" method="POST" class="space-y-4">
-  <!-- Anti-spam e configs -->
-  <input type="text" name="_honey" class="hidden" style="display:none">
-  <input type="hidden" name="_captcha" value="false">
-  <input type="hidden" name="_subject" value="Novo contato do portfólio">
-  <!-- redireciona após sucesso (ajuste a URL da sua página “obrigado”) -->
-  <input type="hidden" name="_next" value="https://portifolio-annancol.vercel.app/thank-you.html">
-
-  <input type="text" name="nome" placeholder="Nome" required
-         class="w-full p-3 border border-gray-300 rounded" />
-  <input type="email" name="email" placeholder="Email" required
-         class="w-full p-3 border border-gray-300 rounded" />
-  <textarea name="mensagem" placeholder="Escreva sua mensagem aqui" rows="4" required
-            class="w-full p-3 border border-gray-300 rounded"></textarea>
-
-  <button type="submit" class="bg-black text-white px-6 py-3 rounded hover:bg-gray-800">
-    Enviar
-  </button>
-</form>
+        <form action="https://formsubmit.co/anna.ancol@gmail.com" method="POST" class="space-y-4">
+          <input type="text" name="_honey" class="hidden" style="display:none">
+          <input type="hidden" name="_captcha" value="false">
+          <input type="hidden" name="_subject" value="Novo contato do portfólio">
+          
+          <input type="hidden" name="_next" value="https://portifolio-annancol.vercel.app/">
+        
+          <input type="text" name="nome" placeholder="Nome" required
+                 class="w-full p-3 border border-gray-300 rounded" />
+          <input type="email" name="email" placeholder="Email" required
+                 class="w-full p-3 border border-gray-300 rounded" />
+          <textarea name="mensagem" placeholder="Escreva sua mensagem aqui" rows="4" required
+                    class="w-full p-3 border border-gray-300 rounded"></textarea>
+        
+          <button type="submit" class="bg-black text-white px-6 py-3 rounded hover:bg-gray-800">
+            Enviar
+          </button>
+        </form>
 
       </div>
     </section>
 
-    <!-- FEATHER ICONS INIT -->
     <script>
       const menuToggle = document.getElementById('menu-toggle');
       const menuClose = document.getElementById('menu-close');
